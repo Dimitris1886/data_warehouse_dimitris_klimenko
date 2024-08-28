@@ -15,4 +15,5 @@ SELECT * FROM netflix;
 DESC TABLE netflix;
 
 SELECT COUNT(*) FROM netflix;
+select Genre from Netflix;
 
