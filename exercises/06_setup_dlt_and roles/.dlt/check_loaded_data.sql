@@ -1,4 +1,3 @@
-USE WAREHOUSE dev_wh;
 SHOW ROLES;
 
 USE ROLE movies_reader;
@@ -9,6 +8,7 @@ SHOW SCHEMAS;
 USE SCHEMA staging;
 
 SHOW TABLES;
+USE WAREHOUSE dev_wh;
 
 SELECT * FROM netflix;
 

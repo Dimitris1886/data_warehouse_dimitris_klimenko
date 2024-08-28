@@ -61,7 +61,7 @@ VALUES
     ('Emily Davis', 'emily.davis@example.com'),
     ('Daniel Brown', 'daniel.brown@example.com');
 
-
+ 
 INSERT INTO transactions (customer_id, model_id, quantity, transaction_date)
 VALUES 
     (1, 3, 1, '2024-08-25 14:35:00'),  -- Michael Johnson buys 1 Ford Mustang
