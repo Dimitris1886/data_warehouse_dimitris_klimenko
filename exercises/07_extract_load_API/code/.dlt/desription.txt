@@ -1,0 +1,18 @@
+This script is designed to search for job advertisements through an API, process the data, and then load it into a Snowflake database. Here's a breakdown of its key components:
+
+1. **Imports and Setup**:
+   - Imports necessary libraries like `dlt` for pipeline management, `requests` for API calls, `json` for data handling, and `Path`/`os` for file path management.
+
+2. **`_get_ads` Function**:
+   - A private function that sends a GET request to the job search API, retrieves job ads based on the provided parameters, and returns the ads as a JSON object.
+
+3. **`jobsearch_resource` Generator**:
+   - A function marked with `@dlt.resource`, which streams job ads one by one as they are fetched from the API. The `write_disposition="replace"` option means that the existing data in the destination table will be replaced.
+
+4. **`run_pipeline` Function**:
+   - Initializes a data pipeline using the `dlt` library, setting it up to load data into a Snowflake database. The function accepts a search query and table name, fetches the job ads using the `jobsearch_resource` function, and then loads the data into the specified table.
+
+5. **Main Execution**:
+   - Sets the working directory, defines a search query (`"data engineer"`), and specifies a table name (`"data_field_job_ads"`). It then runs the pipeline to fetch and load job ads data into Snowflake.
+
+In short, this script automates the process of fetching job ads from an API based on a search query and loading that data into a Snowflake database for further analysis or use.
