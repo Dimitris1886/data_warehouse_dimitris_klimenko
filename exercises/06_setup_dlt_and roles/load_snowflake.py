@@ -1,3 +1,4 @@
+#%%
 import dlt
 import pandas as pd
 from pathlib import Path
@@ -7,7 +8,8 @@ import os
 @dlt.resource(write_disposition="append")
 def load_csv_resource(file_path: str, **kwargs):
     df = pd.read_csv(file_path, **kwargs)
-    yield df.to_dict(orient="records")
+    yield df.to_dict(orient="records") #  yield is used to create a generator that produces
+                                       # a sequence of values over time without terminating the function immediately.
 
 if __name__ == "__main__":
     # need to change to current working directory as this is where 
@@ -38,3 +40,8 @@ if __name__ == "__main__":
 
     # pretty print the information on data that was loaded
     print(load_info)
+
+
+
+
+# %%
