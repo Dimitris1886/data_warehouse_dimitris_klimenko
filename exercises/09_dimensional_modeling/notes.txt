@@ -1,0 +1,32 @@
+star schema/check 
+snowflake app
+dimensional modeling
+joins/sql
+dbdiagram check app
+
+PROJECT INFO:
+
+snowflake ,setup/roles
+config file check
+one time per project
+quik start for dbt and cloud
+
+locator
+yml
+
+--PROJECT--
+
+Purpose:
+
+The project aims to implement the modern data stack to solve a real-life problem.
+
+In addition to using a certain number of techniques, there is a focus on working together in a computer team. This
+means both agile development and being able to use git and github in a team.
+
+Background:
+The company Arbetskollen AB wants to build a data pipeline that serves a dashboard to visualize statistics
+for job advertisements.
+
+The work team has had a data engineer (DE) who together with the product owner (PO) made an initial
+dimensional modeling that is not complete. THEY would really like to finish
+the dimensional modelling, but the company's CEO quickly wanted to see a prototype in order to apply for investment.

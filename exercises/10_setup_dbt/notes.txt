@@ -1,0 +1,38 @@
+The warehouse layer is a part of the data warehouse where the actual storage,
+management, and querying of data occur.
+It serves as the core repository for data that has been collected,
+transformed, and integrated from various sources.
+------------------------------------------------------------------------------------------
+
+
+In dbt (data build tool), the concepts of "upstream" and "downstream" are used to describe 
+the relationship between models (SQL files) in your data pipeline. Here’s what they mean:
+
+Upstream
+
+Definition:
+"Upstream" refers to the models or tables that provide input data to other models. 
+These are the sources or earlier steps in your data pipeline.
+
+Example: If you have a model base_customers that aggregates raw customer data and another 
+model customer_summary that builds on base_customers, then base_customers is considered upstream of customer_summary.
+
+Function:
+Upstream models are typically responsible for preparing or transforming raw data, 
+making it available for downstream models to use.
+
+---------
+
+Downstream:
+
+Definition:
+"Downstream" refers to the models or tables that depend on other models for their input.
+These are the targets or later steps in your data pipeline.
+
+Example:
+In the scenario above, the customer_summary model is downstream of the base_customers model.
+It relies on the output of base_customers to perform further transformations or aggregations.
+
+Function:
+Downstream models are built on top of the data processed by upstream models.
+They use the cleaned and transformed data from upstream models to produce final results or more refined outputs.

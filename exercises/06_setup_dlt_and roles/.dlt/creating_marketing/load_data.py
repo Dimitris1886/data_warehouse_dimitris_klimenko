@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 import os
 #%%
-csv_file_path = "C:\\Users\\DIMITRIS\\Downloads\\ifood_df.csv"
+csv_file_path = "C:\\Users\\DIMITRIS\\Downloads\\New folder\\ifood_df.csv"
 df = pd.read_csv(csv_file_path)
 #%%
 # used for extracting data from source, in this case a local csv file 
@@ -27,7 +27,8 @@ if __name__ == "__main__":
 #%%
     data = list(
     load_csv_resource(
-        working_directory / "data" / "ifood.csv", encoding="latin1"
+        working_directory / "data" / "ifood_df.csv", encoding="latin1"
     )
 )
 #%%
+print(data)
